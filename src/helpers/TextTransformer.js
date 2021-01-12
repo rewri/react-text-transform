@@ -53,7 +53,7 @@ function onlyConsonants(text) {
     if (!text)
         return '';
 
-    return [...normalize(text)].filter(char => /^[^aeiou]+$/i.test(char)).join('');
+    return [...normalize(text)].filter(char => /^[^aeiou /\d+g /\W|_/g ]+$/i.test(char)).join('');
 }
 
 function toVar(text) {
@@ -65,4 +65,4 @@ function toVar(text) {
 
 }
 
-export { reverse, toNumeric, toCSV, toSlug, onlyVowels, onlyConsonants, toVar};
+export { reverse, toNumeric, toCSV, toSlug, onlyVowels, onlyConsonants, toVar };

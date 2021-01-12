@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UserInput from './components/TextTransformer/UserInput';
 import TransformedInputs from './components/TextTransformer/TransformedInputs';
-import { reverse, toNumeric, toCSV, toSlug, onlyVowels, onlyConsonants, toVar } from './helpers/TextTransformer';
+import * as textTransformer from './helpers/TextTransformer';
 
 export default class App extends Component {
 
@@ -23,13 +23,13 @@ export default class App extends Component {
         
         this.setState({
             userInput         : newText,
-            reversedText      : reverse(newText),
-            numericText       : toNumeric(newText),
-            csvText           : toCSV(newText),
-            slugText          : toSlug(newText),
-            onlyVowelsText    : onlyVowels(newText),
-            onlyConsonantsText: onlyConsonants(newText),
-            toVarText         : toVar(newText),
+            reversedText      : textTransformer.reverse(newText),
+            numericText       : textTransformer.toNumeric(newText),
+            csvText           : textTransformer.toCSV(newText),
+            slugText          : textTransformer.toSlug(newText),
+            onlyVowelsText    : textTransformer.onlyVowels(newText),
+            onlyConsonantsText: textTransformer.onlyConsonants(newText),
+            toVarText         : textTransformer.toVar(newText),
         });
 
     }

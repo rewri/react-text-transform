@@ -1,6 +1,6 @@
 {
-  "name": "fer-cap02-aula02",
-  "version": "0.1.0",
+  "name": "react-text-transformer",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "4.2.4",
